@@ -30,6 +30,7 @@ enum BookStatus {
   UNDER_MAINTENANCE
   LOST
 }
+
 //book reservation status :
 enum ReservationStatus {
   PENDING
@@ -58,6 +59,7 @@ model User {
 //book model 
 model Book {
   id              String        @id @default(cuid())
+  isbn            String        @unique
   title           String
   edition         String
   publisher       String

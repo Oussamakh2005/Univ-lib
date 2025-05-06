@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "prisma migrate deploy",
+    "generate": "prisma generate",
+    "build": "npm install --omit=dev && npm run migrate && npm run generate && npm uninstall prisma ",
     "start:dev": "tsx watch ./src/app.ts",
     "start": "node ./dist/app.js"
   },
