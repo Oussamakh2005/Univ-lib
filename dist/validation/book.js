@@ -2,6 +2,7 @@ import { z } from "zod";
 export const newBookSchema = z.object({
     title: z.string().min(3),
     edition: z.string(),
+    isbn: z.string().length(10),
     publisher: z.string(),
     publicationYear: z.number(),
     pageCout: z.number().positive(),
